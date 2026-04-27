@@ -622,8 +622,52 @@ body {
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
   .container { padding: 0 16px; }
-  .glass-card { padding: 24px 18px; }
+  .glass-card { padding: 24px 16px; margin-bottom: 24px; }
   .hero { padding: 100px 0 40px; }
-  .total-section { flex-direction: column; gap: 8px; text-align: center; }
-  .cta-button { width: 100%; padding: 16px 24px; }
+  .hero h1 { font-size: clamp(1.8rem, 8vw, 2.5rem); margin-bottom: 14px; }
+  .hero .subtitle { font-size: 0.95rem; margin-bottom: 24px; padding: 0 10px; }
+  .total-section { flex-direction: column; gap: 12px; text-align: center; padding: 16px; }
+  .cta-button { width: 100%; padding: 16px 20px; font-size: 1rem; }
+  .cta-button .wa-icon { font-size: 1.2rem; }
+  
+  .navbar { padding: 10px 0; }
+  .navbar .logo { font-size: 1.1rem; }
+  .navbar .nav-cta { padding: 6px 14px; font-size: 0.8rem; }
+  
+  .trust-badges { gap: 10px; margin-bottom: 30px; }
+  .trust-badge { padding: 6px 12px; font-size: 0.8rem; }
+  
+  .promo-section { padding: 20px 16px; }
+  .promo-header { font-size: 0.85rem; flex-direction: column; text-align: center; gap: 8px; }
+  .promo-input-group { flex-direction: column; }
+  .promo-apply-btn { width: 100%; padding: 12px; }
+  
+  .extra-item { padding: 12px 14px; }
+  .extra-item .left { gap: 10px; }
+  .extra-item .label { font-size: 0.85rem; line-height: 1.4; }
+  .extra-item .price-tag { font-size: 0.8rem; padding: 4px 10px; }
+  
+  .terms-section { padding: 16px; margin-top: 20px; }
+  .term-item { font-size: 0.8rem; padding: 8px 10px; }
+  .terms-checkbox-label { font-size: 0.85rem; align-items: flex-start; }
+  .terms-checkbox-label .custom-checkbox { margin-top: 2px; }
+  
+  .footer { padding: 30px 0; margin-top: 20px; }
+  .footer .contact-info { flex-direction: column; gap: 12px; align-items: center; }
+  
+  .toast { 
+    top: 70px; right: 16px; left: 16px; width: auto; 
+    transform: translateY(-150%); text-align: center; 
+    padding: 12px 16px; font-size: 0.85rem;
+  }
+  .toast.show { transform: translateY(0); }
+}
+
+@media (max-width: 480px) {
+  .hero-badge { font-size: 0.75rem; padding: 6px 16px; margin-bottom: 16px; }
+  .price-offer { font-size: 2.2rem; }
+  .offer-badge-ribbon { padding: 6px 20px; font-size: 0.85rem; }
+  .section-header h2 { font-size: 1.5rem; }
+  .form-group input, .form-group textarea { padding: 10px 14px; font-size: 0.9rem; }
+  .total-amount { font-size: 1.5rem; }
 }
