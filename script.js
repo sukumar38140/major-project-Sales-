@@ -153,19 +153,35 @@ function initPromo() {
   });
 
   // === REFERRAL LOGIC ===
-  const referralRadios = document.querySelectorAll('input[name="referralRadio"]');
+  const refYes = document.getElementById('refYesCheckbox');
+  const refNo = document.getElementById('refNoCheckbox');
   
-  if (referralRadios.length > 0) {
-    referralRadios.forEach(radio => {
-      radio.addEventListener('change', (e) => {
-        if (e.target.value === 'yes') {
-          referralApplied = true;
-          alert('🎉 ₹1000 Referral Discount Applied!\n\nNote: Fake referrals cannot be accepted. If your referral pays the advance, then only your referral amount will be accepted. That discount will reflect on the final payment.');
-        } else {
-          referralApplied = false;
-        }
-        updateTotal();
-      });
+  if (refYes && refNo) {
+    // Initial state setup (since No is checked by default)
+    if (refNo.checked) {
+      refYes.disabled = true;
+    }
+
+    refYes.addEventListener('change', (e) => {
+      if (e.target.checked) {
+        refNo.disabled = true;
+        referralApplied = true;
+        alert('🎉 ₹1000 Referral Discount Applied!\n\nNote: Fake referrals cannot be accepted. If your referral pays the advance, then only your referral amount will be accepted. That discount will reflect on the final payment.');
+      } else {
+        refNo.disabled = false;
+        referralApplied = false;
+      }
+      updateTotal();
+    });
+
+    refNo.addEventListener('change', (e) => {
+      if (e.target.checked) {
+        refYes.disabled = true;
+        referralApplied = false;
+      } else {
+        refYes.disabled = false;
+      }
+      updateTotal();
     });
   }
 }
