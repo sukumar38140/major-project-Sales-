@@ -160,7 +160,7 @@ function initPromo() {
       radio.addEventListener('change', (e) => {
         if (e.target.value === 'yes') {
           referralApplied = true;
-          showToast('🎉 ₹1000 referral discount applied!', 'success');
+          alert('🎉 ₹1000 Referral Discount Applied!\n\nNote: Fake referrals cannot be accepted. If your referral pays the advance, then only your referral amount will be accepted. That discount will reflect on the final payment.');
         } else {
           referralApplied = false;
         }
