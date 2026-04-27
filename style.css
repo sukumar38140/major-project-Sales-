@@ -614,9 +614,10 @@ body {
   background: rgba(239,68,68,0.95); backdrop-filter: blur(10px);
   color: #fff; padding: 14px 24px; border-radius: var(--radius-sm);
   font-size: 0.9rem; font-weight: 500; box-shadow: 0 8px 30px rgba(239,68,68,0.3);
-  transform: translateX(120%); transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+  transform: translateX(120%); transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+  visibility: hidden; opacity: 0; pointer-events: none;
 }
-.toast.show { transform: translateX(0); }
+.toast.show { transform: translateX(0); visibility: visible; opacity: 1; pointer-events: auto; }
 .toast.success { background: rgba(6,214,160,0.95); box-shadow: 0 8px 30px rgba(6,214,160,0.3); }
 
 /* === RESPONSIVE === */
@@ -660,8 +661,9 @@ body {
     top: 70px; right: 16px; left: 16px; width: auto; 
     transform: translateY(-150%); text-align: center; 
     padding: 12px 16px; font-size: 0.85rem;
+    visibility: hidden; opacity: 0; pointer-events: none;
   }
-  .toast.show { transform: translateY(0); }
+  .toast.show { transform: translateY(0); visibility: visible; opacity: 1; pointer-events: auto; }
 }
 
 @media (max-width: 480px) {

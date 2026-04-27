@@ -153,48 +153,21 @@ function initPromo() {
   });
 
   // === REFERRAL LOGIC ===
-  const applyRefBtn = document.getElementById('applyReferralBtn');
-  const refInput = document.getElementById('referralCode');
+  const referralRadios = document.querySelectorAll('input[name="referralRadio"]');
   
-  if (!applyRefBtn) return;
-
-  applyRefBtn.addEventListener('click', () => {
-    const code = refInput.value.trim();
-
-    if (referralApplied) {
-      showReferralMessage('Referral code already applied!', 'info');
-      return;
-    }
-
-    if (code.length < 10) {
-      showReferralMessage('⚠️ Please enter a valid 10-digit phone number.', 'error');
-      return;
-    }
-
-    referralApplied = true;
-    showReferralMessage('✅ Referral applied! ₹1000 extra discount added!', 'success');
-    refInput.disabled = true;
-    refInput.classList.add('promo-applied');
-    applyRefBtn.textContent = 'Applied ✓';
-    applyRefBtn.classList.add('applied');
-    applyRefBtn.disabled = true;
-    updateTotal();
-    showToast('🎉 ₹1000 referral discount applied!', 'success');
-  });
-
-  refInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') {
-      e.preventDefault();
-      applyRefBtn.click();
-    }
-  });
-}
-
-function showReferralMessage(msg, type) {
-  const refMsg = document.getElementById('referralMessage');
-  refMsg.textContent = msg;
-  refMsg.className = 'promo-message ' + type;
-  refMsg.classList.add('visible');
+  if (referralRadios.length > 0) {
+    referralRadios.forEach(radio => {
+      radio.addEventListener('change', (e) => {
+        if (e.target.value === 'yes') {
+          referralApplied = true;
+          showToast('🎉 ₹1000 referral discount applied!', 'success');
+        } else {
+          referralApplied = false;
+        }
+        updateTotal();
+      });
+    });
+  }
 }
 
 function showPromoMessage(msg, type) {
@@ -277,7 +250,7 @@ function initForm() {
 
     // Promo & Referral info
     const promoInfo = promoApplied ? '✅ KUMAR500 (₹500 discount)' : 'None';
-    const referralInfo = referralApplied ? '✅ ' + document.getElementById('referralCode').value + ' (₹1000 discount)' : 'None';
+    const referralInfo = referralApplied ? '✅ Yes (₹1000 discount)' : 'No';
 
     // Total
     const totalText = document.getElementById('totalAmount').textContent;
