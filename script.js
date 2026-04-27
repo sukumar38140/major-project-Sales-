@@ -157,14 +157,14 @@ function initPromo() {
   const refNo = document.getElementById('refNoCheckbox');
   
   if (refYes && refNo) {
-    // Initial state setup (since No is checked by default)
-    if (refNo.checked) {
-      refYes.disabled = true;
-    }
+    // Initial state check
+    if (refNo.checked) refYes.disabled = true;
+    if (refYes.checked) refNo.disabled = true;
 
     refYes.addEventListener('change', (e) => {
       if (e.target.checked) {
         refNo.disabled = true;
+        refNo.checked = false; // Ensure 'No' is unchecked
         referralApplied = true;
         alert('🎉 ₹1000 Referral Discount Applied!\n\nNote: Fake referrals cannot be accepted. If your referral pays the advance, then only your referral amount will be accepted. That discount will reflect on the final payment.');
       } else {
@@ -177,6 +177,7 @@ function initPromo() {
     refNo.addEventListener('change', (e) => {
       if (e.target.checked) {
         refYes.disabled = true;
+        refYes.checked = false; // Ensure 'Yes' is unchecked
         referralApplied = false;
       } else {
         refYes.disabled = false;
