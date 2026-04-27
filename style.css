@@ -278,6 +278,7 @@ body {
   height: 200%;
   background: conic-gradient(from 0deg, transparent, rgba(124,58,237,0.05), transparent, rgba(37,99,235,0.05), transparent);
   animation: promoShine 8s linear infinite;
+  pointer-events: none;
 }
 @keyframes promoShine {
   100% { transform: rotate(360deg); }
