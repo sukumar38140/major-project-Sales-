@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete My Major Project | Fast & Affordable Academic Projects</title>
+  <meta name="description" content="Get your academic project done fast and affordable. Submit your project details and connect instantly on WhatsApp. 100+ projects completed with fast delivery.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+</head>
+<body>
+
+  <!-- Background Effects -->
+  <div class="bg-animation">
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="orb"></div>
+  </div>
+  <div class="particles"></div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="logo">🎓 Complete my major project</div>
+      <button class="nav-cta" id="navCtaBtn">Get Started</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span>
+        <span>Currently accepting new projects</span>
+      </div>
+
+      <h1>Get Your Academic Project<br><span class="gradient-text">Done Fast &amp; Affordable</span></h1>
+
+      <p class="subtitle">Submit your project details and connect instantly on WhatsApp. No login, no hassle — just results.</p>
+
+      <div class="trust-badges">
+        <div class="trust-badge">
+          <span class="icon">✅</span>
+          <span><strong data-count="100">0+</strong> Projects Completed</span>
+        </div>
+        <div class="trust-badge">
+          <span class="icon">⚡</span>
+          <span>Fast Delivery</span>
+        </div>
+        <div class="trust-badge">
+          <span class="icon">💰</span>
+          <span>Affordable Pricing</span>
+        </div>
+        <div class="trust-badge">
+          <span class="icon">🛡️</span>
+          <span>100% Satisfaction</span>
+        </div>
+      </div>
+
+      <button class="cta-button hero-cta" style="margin-bottom: 20px;">
+        <span class="wa-icon">📋</span>
+        Submit Your Project Now
+      </button>
+    </div>
+  </section>
+
+  <!-- Form Section -->
+  <section id="formSection">
+    <div class="container">
+
+      <!-- Project Details Card -->
+      <div class="glass-card reveal">
+        <div class="section-header">
+          <span class="tag">📋 Step 1</span>
+          <h2>Project Details</h2>
+          <p>Tell us about your academic project</p>
+        </div>
+
+        <form id="projectForm" novalidate>
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Full Name <span class="required">*</span></label>
+              <input type="text" id="fullName" placeholder="Enter your full name" autocomplete="name">
+            </div>
+
+            <div class="form-group">
+              <label>College Name <span class="required">*</span></label>
+              <input type="text" id="college" placeholder="Enter college name">
+            </div>
+
+            <div class="form-group">
+              <label>Roll Number <span class="required">*</span></label>
+              <input type="text" id="rollNo" placeholder="Enter roll number">
+            </div>
+
+            <div class="form-group">
+              <label>WhatsApp Number <span class="required">*</span></label>
+              <input type="tel" id="whatsapp" placeholder="Enter WhatsApp number" autocomplete="tel">
+            </div>
+
+            <div class="form-group full-width">
+              <label>Project Title <span class="required">*</span></label>
+              <input type="text" id="projectTitle" placeholder="e.g. Online Shopping Website, Chat Application">
+            </div>
+
+            <div class="form-group full-width">
+              <label>Project Description</label>
+              <textarea id="projectDesc" placeholder="Describe your project requirements, tech stack, deadlines, etc."></textarea>
+            </div>
+          </div>
+
+          <!-- Pricing Section -->
+          <div class="glass-card reveal" style="margin-top: 32px; background: transparent; border: none; padding: 0; backdrop-filter: none;">
+            <div class="section-header">
+              <span class="tag">💰 Step 2</span>
+              <h2>Choose Your Plan</h2>
+              <p>Select the services you need</p>
+            </div>
+
+            <div class="pricing-highlight">
+              <div class="offer-badge-ribbon">🔥 40% OFF</div>
+              <div class="price-original">₹4,999</div>
+              <div class="price-offer">₹2,999</div>
+              <div class="price-savings">
+                <span>🔥 Limited Time Offer — 40% OFF</span>
+                <span>💰 Save ₹2,000 instantly!</span>
+              </div>
+            </div>
+
+            <!-- Promo Code Section -->
+            <div class="promo-section">
+              <div class="promo-header">
+                <span class="promo-icon">🎟️</span>
+                <span>Have a Promo Code? Get <strong>₹500 Extra Discount!</strong></span>
+              </div>
+              <div class="promo-input-group">
+                <input type="text" id="promoCode" placeholder="Enter promo code" value="KUMAR500" autocomplete="off" spellcheck="false">
+                <button type="button" id="applyPromoBtn" class="promo-apply-btn">Apply</button>
+              </div>
+              <div id="promoMessage" class="promo-message"></div>
+            </div>
+
+            <!-- Extras -->
+            <div class="section-header" style="margin-bottom: 16px;">
+              <h2 style="font-size: 1.2rem;">Add-on Services</h2>
+            </div>
+
+            <div class="extras-list">
+              <div class="extra-item" data-extra="report">
+                <div class="left">
+                  <div class="checkbox-custom"></div>
+                  <span class="label">📄 Project Report</span>
+                </div>
+                <span class="price-tag">+₹299</span>
+              </div>
+
+              <div class="extra-item" data-extra="documentation">
+                <div class="left">
+                  <div class="checkbox-custom"></div>
+                  <span class="label">📝 Documentation</span>
+                </div>
+                <span class="price-tag">+₹299</span>
+              </div>
+
+              <div class="extra-item" data-extra="ppt">
+                <div class="left">
+                  <div class="checkbox-custom"></div>
+                  <span class="label">📊 PPT Presentation</span>
+                </div>
+                <span class="price-tag">+₹299</span>
+              </div>
+
+              <div class="extra-item" data-extra="assistance">
+                <div class="left">
+                  <div class="checkbox-custom"></div>
+                  <span class="label">🤝 Project Assistance</span>
+                </div>
+                <span class="price-tag">+₹99</span>
+              </div>
+
+              <div class="extra-item combo">
+                <div class="left">
+                  <div class="checkbox-custom"></div>
+                  <span class="label">🔥 Combo Pack <small style="color: var(--text-muted);">(Report + Docs + PPT + Assistance)</small></span>
+                </div>
+                <span class="price-tag">₹599</span>
+              </div>
+            </div>
+
+            <!-- Total -->
+            <div class="total-section">
+              <span class="total-label">Total Price</span>
+              <span class="total-amount" id="totalAmount">₹2,999</span>
+            </div>
+          </div>
+
+          <!-- Terms & Conditions -->
+          <div class="terms-section reveal">
+            <div class="terms-header">
+              <span class="terms-icon">📜</span>
+              <h3>Terms & Conditions</h3>
+            </div>
+            <div class="terms-list">
+              <div class="term-item">
+                <span class="term-bullet">✅</span>
+                <span>An <strong>advance payment of ₹100/-</strong> is required to confirm your project booking. Remaining amount to be paid on delivery.</span>
+              </div>
+              <div class="term-item">
+                <span class="term-bullet">✅</span>
+                <span>Delivery timeline will be discussed and agreed upon via WhatsApp after project confirmation.</span>
+              </div>
+              <div class="term-item">
+                <span class="term-bullet">✅</span>
+                <span>Up to <strong>2 free revisions</strong> are included. Additional revisions may incur extra charges.</span>
+              </div>
+              <div class="term-item">
+                <span class="term-bullet">✅</span>
+                <span>Advance payment is <strong>non-refundable</strong> once work has commenced on the project.</span>
+              </div>
+              <div class="term-item">
+                <span class="term-bullet">✅</span>
+                <span>Your personal information and project details will be kept <strong>100% confidential</strong>.</span>
+              </div>
+              <div class="term-item">
+                <span class="term-bullet">✅</span>
+                <span>Project source code and files will be delivered only after <strong>full payment</strong> is received.</span>
+              </div>
+            </div>
+            <div class="terms-checkbox-wrapper">
+              <label class="terms-checkbox-label" for="termsCheckbox">
+                <input type="checkbox" id="termsCheckbox">
+                <span class="custom-checkbox"></span>
+                <span>I agree to the <strong>Terms & Conditions</strong> and confirm the <strong>₹100 advance payment</strong></span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Submit -->
+          <div class="cta-wrapper reveal">
+            <button type="submit" class="cta-button" id="submitBtn">
+              <span class="wa-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+              </span>
+              Submit &amp; Chat on WhatsApp
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- How It Works -->
+      <div class="glass-card reveal" style="text-align: center;">
+        <div class="section-header">
+          <span class="tag">🎯 How It Works</span>
+          <h2>3 Simple Steps</h2>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+          <div style="flex: 1; min-width: 180px; padding: 20px;">
+            <div style="font-size: 2.5rem; margin-bottom: 12px;">📝</div>
+            <h3 style="font-size: 1rem; margin-bottom: 6px;">1. Fill the Form</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Enter your project details and requirements</p>
+          </div>
+          <div style="flex: 1; min-width: 180px; padding: 20px;">
+            <div style="font-size: 2.5rem; margin-bottom: 12px;">💰</div>
+            <h3 style="font-size: 1rem; margin-bottom: 6px;">2. Select Add-ons</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Choose extras & see your total instantly</p>
+          </div>
+          <div style="flex: 1; min-width: 180px; padding: 20px;">
+            <div style="font-size: 2.5rem; margin-bottom: 12px;">📲</div>
+            <h3 style="font-size: 1rem; margin-bottom: 6px;">3. Chat on WhatsApp</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Connect directly with Kumar instantly</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="contact-info">
+        <div class="contact-item">👤 Kumar</div>
+        <div class="contact-item">📱 +91 8978943122</div>
+        <div class="contact-item">💬 <a href="https://wa.me/918978943122" target="_blank">Chat on WhatsApp</a></div>
+      </div>
+      <p>&copy; 2026 Complete my major project. All rights reserved. Made with ❤️ for students.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
