@@ -39,7 +39,7 @@ const EXTRAS = {
   assistance: { price: 99, label: 'Project Assistance' }
 };
 const COMBO_PRICE = 599;
-const PROMO_CODE = 'KUMAR500';
+const PROMO_CODE = 'FIRST500';
 const PROMO_DISCOUNT = 500;
 const REFERRAL_DISCOUNT = 1000;
 let promoApplied = false;
@@ -129,7 +129,7 @@ function initPromo() {
 
     if (code === PROMO_CODE) {
       promoApplied = true;
-      showPromoMessage('✅ Promo code KUMAR500 applied! You saved ₹500 extra!', 'success');
+      showPromoMessage('✅ Promo code FIRST500 applied! You saved ₹500 extra!', 'success');
       promoInput.disabled = true;
       promoInput.classList.add('promo-applied');
       applyBtn.textContent = 'Applied ✓';
@@ -138,7 +138,7 @@ function initPromo() {
       updateTotal();
       showToast('🎉 ₹500 discount applied!', 'success');
     } else {
-      showPromoMessage('❌ Invalid promo code. Try KUMAR500.', 'error');
+      showPromoMessage('❌ Invalid promo code. Try FIRST500.', 'error');
       promoInput.classList.add('promo-error');
       setTimeout(() => promoInput.classList.remove('promo-error'), 1500);
     }
@@ -213,6 +213,8 @@ function initForm() {
       fullName: { el: document.getElementById('fullName'), label: 'Full Name' },
       college: { el: document.getElementById('college'), label: 'College Name' },
       rollNo: { el: document.getElementById('rollNo'), label: 'Roll Number' },
+      projectType: { el: document.getElementById('projectType'), label: 'Project Type' },
+      domain: { el: document.getElementById('domain'), label: 'Domain' },
       projectTitle: { el: document.getElementById('projectTitle'), label: 'Project Title' },
       whatsapp: { el: document.getElementById('whatsapp'), label: 'WhatsApp Number' }
     };
@@ -248,6 +250,8 @@ function initForm() {
     const name = fields.fullName.el.value.trim();
     const college = fields.college.el.value.trim();
     const rollNo = fields.rollNo.el.value.trim();
+    const projectType = fields.projectType.el.value.trim();
+    const domain = fields.domain.el.value.trim();
     const title = fields.projectTitle.el.value.trim();
     const desc = document.getElementById('projectDesc').value.trim() || 'Not provided';
     const phone = fields.whatsapp.el.value.trim();
@@ -266,7 +270,7 @@ function initForm() {
     const extrasStr = selectedExtras.length > 0 ? selectedExtras.join(', ') : 'None';
 
     // Promo & Referral info
-    const promoInfo = promoApplied ? '✅ KUMAR500 (₹500 discount)' : 'None';
+    const promoInfo = promoApplied ? '✅ FIRST500 (₹500 discount)' : 'None';
     const referralInfo = referralApplied ? '✅ Yes (₹1000 discount)' : 'No';
 
     // Total
@@ -276,7 +280,7 @@ function initForm() {
     if (!paymentInitiated) {
       const upiId = "8978943122@upi";
       const payeeName = encodeURIComponent("Kumar");
-      const amount = "499.00";
+      const amount = "199.00";
       const note = encodeURIComponent("Project Advance - " + name);
       
       const upiUrl = `upi://pay?pa=${upiId}&pn=${payeeName}&am=${amount}&cu=INR&tn=${note}`;
@@ -323,6 +327,9 @@ This is ${name}
 College: ${college}
 Roll No: ${rollNo}
 
+Project Type: ${projectType}
+Domain: ${domain}
+
 Project Title: ${title}
 Description: ${desc}
 
@@ -331,7 +338,7 @@ Promo Code: ${promoInfo}
 Referral: ${referralInfo}
 
 Total Price: ${totalText}
-Advance: ₹499 (Paid via UPI)
+Advance: ₹199 (Paid via UPI)
 UTR No: ${utrValue}
 
 My Contact Number: ${phone}`;

@@ -106,6 +106,31 @@
               <input type="text" id="projectTitle" placeholder="e.g. Online Shopping Website, Chat Application">
             </div>
 
+            <div class="form-group">
+              <label>Project Type <span class="required">*</span></label>
+              <select id="projectType" required style="background: rgba(255,255,255,0.05); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 12px 16px; font-size: 0.95rem; color: var(--text-primary); font-family: 'Inter', sans-serif; transition: var(--transition); outline: none; cursor: pointer;">
+                <option value="" selected disabled>Select project type</option>
+                <option value="Mini Project">Mini Project</option>
+                <option value="Major Project">Major Project</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Domain <span class="required">*</span></label>
+              <select id="domain" required style="background: rgba(255,255,255,0.05); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 12px 16px; font-size: 0.95rem; color: var(--text-primary); font-family: 'Inter', sans-serif; transition: var(--transition); outline: none; cursor: pointer;">
+                <option value="" selected disabled>Select domain</option>
+                <option value="Python Projects">Python Projects</option>
+                <option value="Web Development">Web Development</option>
+                <option value="AI/ML Projects">AI/ML Projects</option>
+                <option value="Java Projects">Java Projects</option>
+                <option value="Cybersecurity">Cybersecurity</option>
+                <option value="Mobile Development">Mobile Development</option>
+                <option value="Database Design">Database Design</option>
+                <option value="Cloud Computing">Cloud Computing</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
             <div class="form-group full-width">
               <label>Project Description</label>
               <textarea id="projectDesc" placeholder="Describe your project requirements, tech stack, deadlines, etc."></textarea>
@@ -134,10 +159,10 @@
             <div class="promo-section">
               <div class="promo-header">
                 <span class="promo-icon">🎟️</span>
-                <span>Have a Promo Code? Get <strong>₹500 Extra Discount!</strong></span>
+                <span>Have a Promo Code? Get <strong>₹500 Extra Discount!</strong> (Try: FIRST500)</span>
               </div>
               <div class="promo-input-group">
-                <input type="text" id="promoCode" placeholder="Enter promo code" value="KUMAR500" autocomplete="off" spellcheck="false">
+                <input type="text" id="promoCode" placeholder="Enter promo code" value="FIRST500" autocomplete="off" spellcheck="false">
                 <button type="button" id="applyPromoBtn" class="promo-apply-btn">Apply</button>
               </div>
               <div id="promoMessage" class="promo-message"></div>
@@ -215,7 +240,7 @@
             <div class="terms-list">
               <div class="term-item">
                 <span class="term-bullet">✅</span>
-                <span>An <strong>advance payment of ₹499/-</strong> is required to confirm your project booking. Remaining amount to be paid on delivery.</span>
+                <span>An <strong>advance payment of ₹199/-</strong> is required to confirm your project booking. Remaining amount to be paid on delivery. Transfer all data to WhatsApp for further details.</span>
               </div>
               <div class="term-item">
                 <span class="term-bullet">✅</span>
@@ -246,7 +271,7 @@
               <label class="terms-checkbox-label" for="termsCheckbox">
                 <input type="checkbox" id="termsCheckbox">
                 <span class="custom-checkbox"></span>
-                <span>I agree to the <strong>Terms & Conditions</strong> and confirm the <strong>₹499 advance payment</strong></span>
+                <span>I agree to the <strong>Terms & Conditions</strong> and confirm the <strong>₹199 advance payment</strong></span>
               </label>
             </div>
           </div>
@@ -265,7 +290,7 @@
             </div>
             <button type="submit" class="cta-button" id="submitBtn">
               <span class="wa-icon">💸</span>
-              Pay ₹499 Advance &amp; Submit
+              Pay ₹199 Advance &amp; Submit
             </button>
           </div>
         </form>
