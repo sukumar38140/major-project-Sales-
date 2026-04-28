@@ -150,6 +150,25 @@ body {
   transform: translateY(-2px);
 }
 .trust-badge .icon { font-size: 1.1rem; }
+.trust-badge.highlight-badge {
+  background: linear-gradient(135deg, rgba(6,214,160,0.2), rgba(37,99,235,0.15));
+  border: 2px solid var(--accent);
+  padding: 12px 22px;
+  font-weight: 600;
+  position: relative;
+  animation: highlightGlow 2.5s ease-in-out infinite;
+  box-shadow: 0 0 20px rgba(6,214,160,0.3);
+}
+.trust-badge.highlight-badge:hover {
+  border-color: var(--accent);
+  background: linear-gradient(135deg, rgba(6,214,160,0.3), rgba(37,99,235,0.2));
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 0 0 30px rgba(6,214,160,0.5);
+}
+@keyframes highlightGlow {
+  0%, 100% { box-shadow: 0 0 20px rgba(6,214,160,0.3); }
+  50% { box-shadow: 0 0 40px rgba(6,214,160,0.6); }
+}
 
 /* === SECTION HEADERS === */
 .section-header {
