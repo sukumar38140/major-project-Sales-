@@ -1,2 +1,389 @@
-<html lang="en"><head>  <meta charset="UTF-8">  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Complete My Major Project | Fast & Affordable Academic Projects</title>  <meta name="description" content="Get your academic project done fast and affordable. Submit your project details and connect instantly on WhatsApp. 100+ projects completed with fast delivery.">  <link rel="stylesheet" href="style.css">  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>"></head><body>  <!-- Background Effects -->  <div class="bg-animation">    <div class="orb"></div>    <div class="orb"></div>    <div class="orb"></div>  </div>  <div class="particles"></div>  <!-- Toast -->  <div id="toast" class="toast"></div>  <!-- Navbar -->  <nav class="navbar" id="navbar">    <div class="container">      <div class="logo">🎓 Complete my major project</div>      <button class="nav-cta" id="navCtaBtn">Get Started</button>    </div>  </nav>  <!-- Hero Section -->  <section class="hero" id="home">    <div class="container">      <div class="hero-badge">        <span class="pulse-dot"></span>        <span>Currently accepting new projects</span>      </div>      <h1>Get Your Academic Project<br><span class="gradient-text">Done Fast &amp; Affordable</span></h1>      <p class="subtitle">Submit your project details and connect instantly on WhatsApp. No login, no hassle — just results.</p>      <div class="trust-badges">        <div class="trust-badge">          <span class="icon">✅</span>          <span><strong data-count="100">0+</strong> Projects Completed</span>        </div>        <div class="trust-badge">          <span class="icon">⚡</span>          <span>Fast Delivery</span>        </div>        <div class="trust-badge">          <span class="icon">💰</span>          <span>Affordable Pricing</span>        </div>        <div class="trust-badge">          <span class="icon">🛡️</span>          <span>100% Satisfaction</span>        </div>      </div>      <button class="cta-button hero-cta" style="margin-bottom: 20px;">        <span class="wa-icon">📋</span>        Submit Your Project Now      </button>    </div>  </section>  <!-- Form Section -->  <section id="formSection">    <div class="container">      <!-- Project Details Card -->      <div class="glass-card reveal">        <div class="section-header">          <span class="tag">📋 Step 1</span>          <h2>Project Details</h2>          <p>Tell us about your academic project</p>        </div>        <form id="projectForm" novalidate>          <div class="form-grid">            <div class="form-group">              <label>Full Name <span class="required">*</span></label>              <input type="text" id="fullName" placeholder="Enter your full name" autocomplete="name">            </div>            <div class="form-group">              <label>College Name <span class="required">*</span></label>              <input type="text" id="college" placeholder="Enter college name">            </div>            <div class="form-group">              <label>Roll Number <span class="required">*</span></label>              <input type="text" id="rollNo" placeholder="Enter roll number">            </div>            <div class="form-group">              <label>WhatsApp Number <span class="required">*</span></label>              <input type="tel" id="whatsapp" placeholder="Enter WhatsApp number" autocomplete="tel">            </div>            <div class="form-group full-width">              <label>Project Title <span class="required">*</span></label>              <input type="text" id="projectTitle" placeholder="e.g. Online Shopping Website, Chat Application">            </div>            <div class="form-group full-width">              <label>Project Description</label>              <textarea id="projectDesc" placeholder="Describe your project requirements, tech stack, deadlines, etc."></textarea>@@ -134,10 +159,10 @@            <div class="promo-section">              <div class="promo-header">                <span class="promo-icon">🎟️</span>                <span>Have a Promo Code? Get <strong>₹500 Extra Discount!</strong></span>              </div>              <div class="promo-input-group">                <input type="text" id="promoCode" placeholder="Enter promo code" value="KUMAR500" autocomplete="off" spellcheck="false">                <button type="button" id="applyPromoBtn" class="promo-apply-btn">Apply</button>              </div>              <div id="promoMessage" class="promo-message"></div>@@ -215,7 +240,7 @@            <div class="terms-list">              <div class="term-item">                <span class="term-bullet">✅</span>                <span>An <strong>advance payment of ₹499/-</strong> is required to confirm your project booking. Remaining amount to be paid on delivery.</span>              </div>              <div class="term-item">                <span class="term-bullet">✅</span>@@ -246,7 +271,7 @@              <label class="terms-checkbox-label" for="termsCheckbox">                <input type="checkbox" id="termsCheckbox">                <span class="custom-checkbox"></span>                <span>I agree to the <strong>Terms & Conditions</strong> and confirm the <strong>₹499 advance payment</strong></span>              </label>            </div>          </div>@@ -265,7 +290,7 @@            </div>            <button type="submit" class="cta-button" id="submitBtn">              <span class="wa-icon">💸</span>              Pay ₹499 Advance &amp; Submit            </button>          </div>        </form>
-Collapse file‎script.js‎Copy file name to clipboardExpand all lines: script.js+13-6Lines changed: 13 additions & 6 deletionsOriginal file line numberOriginal file lineDiff line numberDiff line change@@ -39,7 +39,7 @@  assistance: { price: 99, label: 'Project Assistance' }};const COMBO_PRICE = 599;const PROMO_CODE = 'KUMAR500';const PROMO_DISCOUNT = 500;const REFERRAL_DISCOUNT = 1000;let promoApplied = false;@@ -129,7 +129,7 @@    if (code === PROMO_CODE) {      promoApplied = true;      showPromoMessage('✅ Promo code KUMAR500 applied! You saved ₹500 extra!', 'success');      promoInput.disabled = true;      promoInput.classList.add('promo-applied');      applyBtn.textContent = 'Applied ✓';@@ -138,7 +138,7 @@      updateTotal();      showToast('🎉 ₹500 discount applied!', 'success');    } else {      showPromoMessage('❌ Invalid promo code. Try KUMAR500.', 'error');      promoInput.classList.add('promo-error');      setTimeout(() => promoInput.classList.remove('promo-error'), 1500);    }@@ -213,6 +213,8 @@      fullName: { el: document.getElementById('fullName'), label: 'Full Name' },      college: { el: document.getElementById('college'), label: 'College Name' },      rollNo: { el: document.getElementById('rollNo'), label: 'Roll Number' },      projectTitle: { el: document.getElementById('projectTitle'), label: 'Project Title' },      whatsapp: { el: document.getElementById('whatsapp'), label: 'WhatsApp Number' }    };@@ -248,6 +250,8 @@    const name = fields.fullName.el.value.trim();    const college = fields.college.el.value.trim();    const rollNo = fields.rollNo.el.value.trim();    const title = fields.projectTitle.el.value.trim();    const desc = document.getElementById('projectDesc').value.trim() || 'Not provided';    const phone = fields.whatsapp.el.value.trim();@@ -266,7 +270,7 @@    const extrasStr = selectedExtras.length > 0 ? selectedExtras.join(', ') : 'None';    // Promo & Referral info    const promoInfo = promoApplied ? '✅ KUMAR500 (₹500 discount)' : 'None';    const referralInfo = referralApplied ? '✅ Yes (₹1000 discount)' : 'No';    // Total@@ -276,7 +280,7 @@    if (!paymentInitiated) {      const upiId = "8978943122@upi";      const payeeName = encodeURIComponent("Kumar");      const amount = "499.00";      const note = encodeURIComponent("Project Advance - " + name);      const upiUrl = `upi://pay?pa=${upiId}&pn=${payeeName}&am=${amount}&cu=INR&tn=${note}`;@@ -323,6 +327,9 @@College: ${college}Roll No: ${rollNo}Project Title: ${title}Description: ${desc}@@ -331,52 +338,52 @@Referral: ${referralInfo}Total Price: ${totalText}Advance: ₹499 (Paid via UPI)UTR No: ${utrValue}My Contact Number: ${phone}`;    // Encode & redirect    const encoded = encodeURIComponent(message);    const url = `https://wa.me/919494565162?text=${encoded}`;    showToast('✅ Redirecting to WhatsApp...', 'success');    setTimeout(() => window.open(url, '_blank'), 800);  });}// === SMOOTH SCROLL FOR NAV CTA ===function initSmoothScroll() {  document.querySelector('.nav-cta')?.addEventListener('click', () => {    document.getElementById('formSection')?.scrollIntoView({ behavior: 'smooth' });  });  document.querySelector('.hero-cta')?.addEventListener('click', () => {    document.getElementById('formSection')?.scrollIntoView({ behavior: 'smooth' });  });}// === COUNTER ANIMATION ===function animateCounters() {  document.querySelectorAll('[data-count]').forEach(el => {    const target = parseInt(el.dataset.count);    let current = 0;    const increment = Math.ceil(target / 40);    const timer = setInterval(() => {      current += increment;      if (current >= target) { current = target; clearInterval(timer); }      el.textContent = current + '+';    }, 30);  });}// === INIT ===document.addEventListener('DOMContentLoaded', () => {  createParticles();  initReveal();  initNavbar();  initPricing();  initPromo();  initForm();  initSmoothScroll();  setTimeout(animateCounters, 500);});
+// === PARTICLE SYSTEM ===
+function createParticles() {
+  const container = document.querySelector('.particles');
+  if (!container) return;
+  for (let i = 0; i < 30; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.animationDuration = (8 + Math.random() * 12) + 's';
+    p.style.animationDelay = Math.random() * 10 + 's';
+    p.style.width = p.style.height = (2 + Math.random() * 3) + 'px';
+    container.appendChild(p);
+  }
+}
+
+// === SCROLL REVEAL ===
+function initReveal() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+}
+
+// === NAVBAR SCROLL ===
+function initNavbar() {
+  const nav = document.querySelector('.navbar');
+  window.addEventListener('scroll', () => {
+    nav.style.background = window.scrollY > 50
+      ? 'rgba(10,14,26,0.95)' : 'rgba(10,14,26,0.8)';
+  });
+}
+
+// === PRICING LOGIC ===
+const BASE_PRICE = 2999;
+const EXTRAS = {
+  report: { price: 299, label: 'Project Report' },
+  documentation: { price: 299, label: 'Documentation' },
+  ppt: { price: 299, label: 'PPT' },
+  assistance: { price: 99, label: 'Project Assistance' }
+};
+const COMBO_PRICE = 599;
+const PROMO_CODE = 'FIRST500';
+const PROMO_DISCOUNT = 500;
+const REFERRAL_DISCOUNT = 1000;
+let promoApplied = false;
+let referralApplied = false;
+let paymentInitiated = false;
+
+function initPricing() {
+  const individualItems = document.querySelectorAll('.extra-item:not(.combo)');
+  const comboItem = document.querySelector('.extra-item.combo');
+
+  individualItems.forEach(item => {
+    item.addEventListener('click', () => {
+      if (item.classList.contains('disabled')) return;
+      item.classList.toggle('selected');
+      updateTotal();
+    });
+  });
+
+  if (comboItem) {
+    comboItem.addEventListener('click', () => {
+      comboItem.classList.toggle('selected');
+      const isCombo = comboItem.classList.contains('selected');
+      individualItems.forEach(item => {
+        if (isCombo) {
+          item.classList.remove('selected');
+          item.classList.add('disabled');
+        } else {
+          item.classList.remove('disabled');
+        }
+      });
+      updateTotal();
+    });
+  }
+}
+
+function updateTotal() {
+  let total = BASE_PRICE;
+  const comboItem = document.querySelector('.extra-item.combo');
+
+  if (comboItem && comboItem.classList.contains('selected')) {
+    total += COMBO_PRICE;
+  } else {
+    document.querySelectorAll('.extra-item:not(.combo).selected').forEach(item => {
+      const key = item.dataset.extra;
+      if (EXTRAS[key]) total += EXTRAS[key].price;
+    });
+  }
+
+  if (promoApplied) {
+    total -= PROMO_DISCOUNT;
+  }
+  
+  if (referralApplied) {
+    total -= REFERRAL_DISCOUNT;
+  }
+  
+  // Ensure total doesn't go below 0
+  if (total < 0) total = 0;
+
+  const amountEl = document.getElementById('totalAmount');
+  amountEl.textContent = '₹' + total.toLocaleString('en-IN');
+  amountEl.classList.remove('animate');
+  void amountEl.offsetWidth;
+  amountEl.classList.add('animate');
+}
+
+// === PROMO CODE ===
+function initPromo() {
+  const applyBtn = document.getElementById('applyPromoBtn');
+  const promoInput = document.getElementById('promoCode');
+  const promoMsg = document.getElementById('promoMessage');
+
+  if (!applyBtn) return;
+
+  applyBtn.addEventListener('click', () => {
+    const code = promoInput.value.trim().toUpperCase();
+
+    if (promoApplied) {
+      showPromoMessage('Promo code already applied!', 'info');
+      return;
+    }
+
+    if (!code) {
+      showPromoMessage('⚠️ Please enter a promo code.', 'error');
+      return;
+    }
+
+    if (code === PROMO_CODE) {
+      promoApplied = true;
+      showPromoMessage('✅ Promo code FIRST500 applied! You saved ₹500 extra!', 'success');
+      promoInput.disabled = true;
+      promoInput.classList.add('promo-applied');
+      applyBtn.textContent = 'Applied ✓';
+      applyBtn.classList.add('applied');
+      applyBtn.disabled = true;
+      updateTotal();
+      showToast('🎉 ₹500 discount applied!', 'success');
+    } else {
+      showPromoMessage('❌ Invalid promo code. Try FIRST500.', 'error');
+      promoInput.classList.add('promo-error');
+      setTimeout(() => promoInput.classList.remove('promo-error'), 1500);
+    }
+  });
+
+  // Allow Enter key to apply
+  promoInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      applyBtn.click();
+    }
+  });
+
+  // === REFERRAL LOGIC ===
+  const refYes = document.getElementById('refYesCheckbox');
+  const refNo = document.getElementById('refNoCheckbox');
+  
+  if (refYes && refNo) {
+    // Initial state check
+    if (refNo.checked) refYes.disabled = true;
+    if (refYes.checked) refNo.disabled = true;
+
+    refYes.addEventListener('change', (e) => {
+      if (e.target.checked) {
+        refNo.disabled = true;
+        refNo.checked = false; // Ensure 'No' is unchecked
+        referralApplied = true;
+        alert('🎉 ₹1000 Referral Discount Applied!\n\nNote: Fake referrals cannot be accepted. If your referral pays the advance, then only your referral amount will be accepted. That discount will reflect on the final payment.');
+      } else {
+        refNo.disabled = false;
+        referralApplied = false;
+      }
+      updateTotal();
+    });
+
+    refNo.addEventListener('change', (e) => {
+      if (e.target.checked) {
+        refYes.disabled = true;
+        refYes.checked = false; // Ensure 'Yes' is unchecked
+        referralApplied = false;
+      } else {
+        refYes.disabled = false;
+      }
+      updateTotal();
+    });
+  }
+}
+
+function showPromoMessage(msg, type) {
+  const promoMsg = document.getElementById('promoMessage');
+  promoMsg.textContent = msg;
+  promoMsg.className = 'promo-message ' + type;
+  promoMsg.classList.add('visible');
+}
+
+// === TOAST NOTIFICATION ===
+function showToast(msg, type = 'error') {
+  const toast = document.getElementById('toast');
+  toast.textContent = msg;
+  toast.className = 'toast ' + type;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 3500);
+}
+
+// === FORM VALIDATION & SUBMIT ===
+function initForm() {
+  const form = document.getElementById('projectForm');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const fields = {
+      fullName: { el: document.getElementById('fullName'), label: 'Full Name' },
+      college: { el: document.getElementById('college'), label: 'College Name' },
+      rollNo: { el: document.getElementById('rollNo'), label: 'Roll Number' },
+      projectType: { el: document.getElementById('projectType'), label: 'Project Type' },
+      domain: { el: document.getElementById('domain'), label: 'Domain' },
+      projectTitle: { el: document.getElementById('projectTitle'), label: 'Project Title' },
+      whatsapp: { el: document.getElementById('whatsapp'), label: 'WhatsApp Number' }
+    };
+
+    // Clear previous errors
+    document.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
+
+    // Validate
+    let firstError = null;
+    for (const key in fields) {
+      const val = fields[key].el.value.trim();
+      if (!val) {
+        fields[key].el.classList.add('error');
+        if (!firstError) firstError = fields[key].label;
+      }
+    }
+
+    if (firstError) {
+      showToast('⚠️ Please fill: ' + firstError);
+      return;
+    }
+
+    // Validate terms checkbox
+    const termsCheckbox = document.getElementById('termsCheckbox');
+    if (!termsCheckbox || !termsCheckbox.checked) {
+      showToast('⚠️ Please accept the Terms & Conditions');
+      termsCheckbox?.closest('.terms-checkbox-wrapper')?.classList.add('shake');
+      setTimeout(() => termsCheckbox?.closest('.terms-checkbox-wrapper')?.classList.remove('shake'), 600);
+      return;
+    }
+
+    // Gather data
+    const name = fields.fullName.el.value.trim();
+    const college = fields.college.el.value.trim();
+    const rollNo = fields.rollNo.el.value.trim();
+    const projectType = fields.projectType.el.value.trim();
+    const domain = fields.domain.el.value.trim();
+    const title = fields.projectTitle.el.value.trim();
+    const desc = document.getElementById('projectDesc').value.trim() || 'Not provided';
+    const phone = fields.whatsapp.el.value.trim();
+
+    // Selected extras
+    let selectedExtras = [];
+    const comboItem = document.querySelector('.extra-item.combo');
+    if (comboItem && comboItem.classList.contains('selected')) {
+      selectedExtras.push('🔥 Combo Pack (Report + Documentation + PPT + Assistance)');
+    } else {
+      document.querySelectorAll('.extra-item:not(.combo).selected').forEach(item => {
+        const key = item.dataset.extra;
+        if (EXTRAS[key]) selectedExtras.push(EXTRAS[key].label);
+      });
+    }
+    const extrasStr = selectedExtras.length > 0 ? selectedExtras.join(', ') : 'None';
+
+    // Promo & Referral info
+    const promoInfo = promoApplied ? '✅ FIRST500 (₹500 discount)' : 'None';
+    const referralInfo = referralApplied ? '✅ Yes (₹1000 discount)' : 'No';
+
+    // Total
+    const totalText = document.getElementById('totalAmount').textContent;
+
+    // Payment Integration (UPI)
+    if (!paymentInitiated) {
+      const upiId = "8978943122@upi";
+      const payeeName = encodeURIComponent("Kumar");
+      const amount = "199.00";
+      const note = encodeURIComponent("Project Advance - " + name);
+      
+      const upiUrl = `upi://pay?pa=${upiId}&pn=${payeeName}&am=${amount}&cu=INR&tn=${note}`;
+      
+      // Attempt to open UPI App
+      window.location.href = upiUrl;
+      
+      paymentInitiated = true;
+      document.getElementById('utrContainer').style.display = 'block';
+      const submitBtn = document.getElementById('submitBtn');
+      submitBtn.innerHTML = `
+        <span class="wa-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+        </span>
+        Verify Payment &amp; Chat
+      `;
+      submitBtn.style.background = 'linear-gradient(135deg, #2563eb, #1d4ed8)';
+      
+      showToast('📱 Opening UPI App... Complete payment and enter the UTR below to verify!', 'success');
+      return; // Stop here and wait for second click
+    }
+
+    // Validate UTR on second click
+    const utrInput = document.getElementById('utrInput');
+    const utrValue = utrInput.value.trim();
+    
+    if (utrValue.length < 8) {
+      showToast('⚠️ Please enter a valid UPI UTR or Reference Number to verify your payment.', 'error');
+      utrInput.style.borderColor = '#ef4444';
+      utrInput.style.boxShadow = '0 0 0 3px rgba(239,68,68,0.15)';
+      setTimeout(() => {
+        utrInput.style.borderColor = 'var(--border)';
+        utrInput.style.boxShadow = 'none';
+      }, 2000);
+      return;
+    }
+
+    // Build message for WhatsApp (Execute on 2nd Click if UTR is valid)
+    const message = `Hi Kumar,
+This is ${name}
+
+College: ${college}
+Roll No: ${rollNo}
+
+Project Type: ${projectType}
+Domain: ${domain}
+
+Project Title: ${title}
+Description: ${desc}
+
+Selected Extras: ${extrasStr}
+Promo Code: ${promoInfo}
+Referral: ${referralInfo}
+
+Total Price: ${totalText}
+Advance: ₹199 (Paid via UPI)
+UTR No: ${utrValue}
+
+My Contact Number: ${phone}`;
+
+    // Encode & redirect
+    const encoded = encodeURIComponent(message);
+    const url = `https://wa.me/919494565162?text=${encoded}`;
+
+    showToast('✅ Redirecting to WhatsApp...', 'success');
+    setTimeout(() => window.open(url, '_blank'), 800);
+  });
+}
+
+// === SMOOTH SCROLL FOR NAV CTA ===
+function initSmoothScroll() {
+  document.querySelector('.nav-cta')?.addEventListener('click', () => {
+    document.getElementById('formSection')?.scrollIntoView({ behavior: 'smooth' });
+  });
+  document.querySelector('.hero-cta')?.addEventListener('click', () => {
+    document.getElementById('formSection')?.scrollIntoView({ behavior: 'smooth' });
+  });
+}
+
+// === COUNTER ANIMATION ===
+function animateCounters() {
+  document.querySelectorAll('[data-count]').forEach(el => {
+    const target = parseInt(el.dataset.count);
+    let current = 0;
+    const increment = Math.ceil(target / 40);
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) { current = target; clearInterval(timer); }
+      el.textContent = current + '+';
+    }, 30);
+  });
+}
+
+// === INIT ===
+document.addEventListener('DOMContentLoaded', () => {
+  createParticles();
+  initReveal();
+  initNavbar();
+  initPricing();
+  initPromo();
+  initForm();
+  initSmoothScroll();
+  setTimeout(animateCounters, 500);
+});
